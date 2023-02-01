@@ -2,8 +2,8 @@
 
 
 #include "AdapterPatternGameModeBase.h"
-#include "GunAdapter.h"
-#include "Shooter.h"
+#include "GunAdapter.h" //Adaptador de pistola
+#include "Shooter.h" //Tirador
 
 AAdapterPatternGameModeBase::AAdapterPatternGameModeBase()
 {
@@ -16,14 +16,14 @@ void AAdapterPatternGameModeBase::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//Spawn the Gun Adapter
+	//Engendrar el adaptador de pistola
 	AGunAdapter* GunAdapter = GetWorld()->SpawnActor<AGunAdapter>(AGunAdapter::StaticClass());
 
-	//Spawn the Shooter and set the Gun Adapter
+	//Engendrar el tirador y establecer el adaptador de pistola
 	Shooter = GetWorld()->SpawnActor<AShooter>(AShooter::StaticClass());
 	Shooter->SetSlingShot(GunAdapter);
 
-	//Shoot
+	//Disparar
 	Shooter->Sling();
 
 }

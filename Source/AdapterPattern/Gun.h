@@ -13,7 +13,7 @@ class ADAPTERPATTERN_API AGun : public AActor
 	
 public:	
 	// Sets default values for this actor's properties
-	AGun();
+	AGun(); //Pistola
 
 protected:
 	// Called when the game starts or when spawned
@@ -23,7 +23,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	//Fire with the gun
+	//Disparar con la pistola
 	void Fire();
 
 };

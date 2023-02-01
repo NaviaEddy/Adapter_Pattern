@@ -3,7 +3,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "SlingShot.h"
+#include "SlingShot.h" //Tiro con honda
 #include "Shooter.generated.h"
 
 UCLASS()
@@ -13,11 +13,11 @@ class ADAPTERPATTERN_API AShooter : public AActor, public ISlingShot
 	
 public:	
 	// Sets default values for this actor's properties
-	AShooter();
+	AShooter(); //Tirador
 
 private:
 
-	//The weapon of the shooter, that must be a SlingShot
+	//El arma del tirador, que debe ser un tiro con honda
 	ISlingShot* SlingShot;
 
 protected:
@@ -28,11 +28,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	//Set the Weapon Actor
+	//Establecer el Arma Actor
 	void SetSlingShot(AActor* SlingShotObj);
 
-	//Fire with the SlingShot
-	void Sling();
+	//Disparar con el tiro con honda
+	void Sling() override;
 
 
 };

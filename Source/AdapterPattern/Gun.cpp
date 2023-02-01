@@ -27,8 +27,8 @@ void AGun::Tick(float DeltaTime)
 
 void AGun::Fire()
 {
-	//Print Fire log
-	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow, FString::Printf(TEXT("Our gun is firing")));
+	//Imprimir Registro de disparo
+	GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Yellow, FString::Printf(TEXT("Nuestra arma esta disparando")));
 
 }
 

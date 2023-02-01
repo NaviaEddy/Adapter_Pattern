@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
-#include "SlingShot.generated.h"
+#include "SlingShot.generated.h" 
 
 // This class does not need to be modified.
 UINTERFACE(MinimalAPI)
@@ -16,13 +16,13 @@ class USlingShot : public UInterface
 /**
  * 
  */
-class ADAPTERPATTERN_API ISlingShot
+class ADAPTERPATTERN_API ISlingShot //Tiro con honda
 {
 	GENERATED_BODY()
 
 	// Add interface functions to this class. This is the class that will be inherited to implement this interface.
 public:
 
-	//The pure virtual function of the SlingShot
-	virtual void Sling() = 0;
+	//La función virtual pura del SlingShot
+	virtual void Sling() = 0; //Honda
 };

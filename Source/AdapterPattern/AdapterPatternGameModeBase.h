@@ -19,7 +19,7 @@ public:
 
 private:
 
-	//The Shooter Actor that holds the gun adapter
+	//El Actor Tirador que sujeta el adaptador del arma
 	UPROPERTY()
 		class AShooter* Shooter;
 

@@ -2,7 +2,7 @@
 
 
 #include "GunAdapter.h"
-#include "Gun.h"
+#include "Gun.h" //Pistola
 
 // Sets default values
 AGunAdapter::AGunAdapter()
@@ -17,7 +17,7 @@ void AGunAdapter::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//Spawn the weapon
+	//Engendrar el arma
 	Weapon = GetWorld()->SpawnActor<AGun>(AGun::StaticClass());
 	
 }
@@ -32,11 +32,11 @@ void AGunAdapter::Tick(float DeltaTime)
 void AGunAdapter::Sling()
 {
 	if (!Weapon) {
-		UE_LOG(LogTemp, Error, TEXT("Sling(): Weapon is NULL, make sure it's initialized." ));
+		UE_LOG(LogTemp, Error, TEXT("Sling(): Weapon es NULL, asegurese de que este inicializada." ));
 		return ; 
 	}
 
-	//Call the Fire function
+	//Llamar a la función disparo
 	Weapon->Fire();
 
 }

@@ -27,13 +27,13 @@ void AShooter::Tick(float DeltaTime)
 
 void AShooter::SetSlingShot(AActor* SlingShotObj)
 {
-	//Cast the passed Actor and set the weapon
+	//Lanza el Actor pasado y fija el arma
 	SlingShot = Cast<ISlingShot>(SlingShotObj);
 
-	if(!SlingShot) //Log Error if cast fails
+	if(!SlingShot) //Error de registro si falla el lanzamiento
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, FString::Printf(TEXT("Invalid Cast! See Output log for more details")));
-		UE_LOG(LogTemp, Error, TEXT("SetSlingShot(): The Actor is not a SlingShot! Are you sure that the Actor implements that interface ? " ));
+		GEngine->AddOnScreenDebugMessage(-1, 15.f, FColor::Red, FString::Printf(TEXT("Lanzamiento no valido! Vea el registro de salida para mas detalles")));
+		UE_LOG(LogTemp, Error, TEXT("SetSlingShot(): El Actor pasado no es un tiro con honda! Esta seguro de que el Actor implementa esa interfaz?" ));
 	}
 
 }
@@ -41,10 +41,10 @@ void AShooter::SetSlingShot(AActor* SlingShotObj)
 void AShooter::Sling()
 {
 	if (!SlingShot) {
-		UE_LOG(LogTemp, Error, TEXT("Sling(): SlingShot is NULL, make sure it's initialized.")); 
+		UE_LOG(LogTemp, Error, TEXT("Sling(): Tiro con honda es NULL, asegurese de que este inicializada.")); 
 		return;
 	}
-	//Fire
+	//LLamar a la funcion honda 
 	SlingShot->Sling();
 
 }

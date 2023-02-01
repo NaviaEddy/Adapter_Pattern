@@ -3,7 +3,7 @@
 #pragma once
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "SlingShot.h"
+#include "SlingShot.h" //Tiro con Honda
 #include "GunAdapter.generated.h"
 
 UCLASS()
@@ -13,11 +13,11 @@ class ADAPTERPATTERN_API AGunAdapter : public AActor, public ISlingShot
 	
 public:	
 	// Sets default values for this actor's properties
-	AGunAdapter();
+	AGunAdapter(); //Adaptador de pistola
 
 private: 
 
-	//The Weapon Actor
+	//El arma actor
 	UPROPERTY()
 		class AGun* Weapon;
 
@@ -29,6 +29,6 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	//Fire the Weapon
-	void Sling() override;
+	//Disparar el arma
+	void Sling() override; //Honda
 };
